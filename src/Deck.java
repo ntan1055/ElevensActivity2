@@ -23,7 +23,6 @@ public class Deck {
      */
     private int size;
 
-
     /**
      * Creates a new <code>Deck</code> instance.<BR>
      * It pairs each element of ranks with each element of suits,
@@ -32,31 +31,44 @@ public class Deck {
      * @param suits is an array containing all of the card suits.
      * @param values is an array containing all of the card point values.
      */
-    public Deck(String[] ranks, String[] suits, int[] values) {
+    public Deck(String[] ranks, String[] suits, int[] values)
+    {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+        cards = new ArrayList<>();
     }
-
 
     /**
      * Determines if this deck is empty (no undealt cards).
      * @return true if this deck is empty, false otherwise.
      */
+
     public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+        if (size() == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
      * Accesses the number of undealt cards in this deck.
      * @return the number of undealt cards in this deck.
      */
+
     public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+        return size;
     }
 
     /**
      * Randomly permute the given collection of cards
      * and reset the size to represent the entire deck.
      */
+
     public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
     }
@@ -74,6 +86,7 @@ public class Deck {
      * Generates and returns a string representation of this deck.
      * @return a string representation of this deck.
      */
+
     @Override
     public String toString() {
         String rtn = "size = " + size + "\nUndealt cards: \n";
