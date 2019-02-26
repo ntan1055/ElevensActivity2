@@ -41,7 +41,6 @@ public class Deck {
             this.cards.add(newCard);
         }
         this.size = this.cards.size();
-        shuffle();
     }
 
     /**
